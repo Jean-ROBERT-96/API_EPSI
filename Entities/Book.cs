@@ -18,12 +18,12 @@ namespace Entities
         [Column("author_id"), Required]
         public int AuthorId { get; set; }
         [ForeignKey(nameof(AuthorId))]
-        public Author Author { get; set; }
+        public Author? Author { get; set; }
 
         [Column("publisher_id"), Required]
         public int PublisherId { get; set; }
         [ForeignKey(nameof(PublisherId))]
-        public Publisher Publisher { get; set; }
+        public Publisher? Publisher { get; set; }
 
         [Column("release")]
         public DateTime? Release { get; set; }
